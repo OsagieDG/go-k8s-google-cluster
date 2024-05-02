@@ -1,8 +1,6 @@
 # go-k8s-google-cluster
 
-# To run temporary unsafe link, use:
--            http://34.142.105.97/
-
+### To access the temporary unsafe link, use the following URL: http://34.142.105.97/ 
 
 ![page](https://github.com/osag1e/go-k8s-google-cluster/blob/main/images/page.png)
 

@@ -1,0 +1,35 @@
+using the terminal
+
+gcloud auth login
+after that make sure to switch to your projectID.
+if projectID is (sample-cluster-403202)
+you have to run: $ gcloud config set project sample-cluster-403202
+ |
+then use  
+ |
+make create-cluster
+ |
+kubectl get nodes
+ |
+make create-image
+ |
+make build-image
+ |
+next use
+ | 
+kubectl apply -f deployment.yaml
+kubectl apply -f service.yaml
+or use cmd: make apply 
+ |
+next use
+ |
+kubectl get deployments
+kubectl get pods
+kubectl get services
+or use cmd: make get  
+
+to delete cluster
+make delete-cluster
+
+to delete image 
+make delete-image

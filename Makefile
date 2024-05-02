@@ -1,4 +1,4 @@
-PROJECT_ID = sample-cluster-403202
+PROJECT_ID = intro-repo
 CLUSTER_NAME = go-k8s-google-cluster
 LOCATION = europe-west2
 IMAGE_NAME = europe-west2-docker.pkg.dev/$(PROJECT_ID)/intro-repo/go-k8s-google-cluster

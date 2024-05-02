@@ -4,6 +4,9 @@ import (
 	"fmt"
 	"net/http"
 	"text/template"
+
+	"github.com/go-chi/chi/middleware"
+	"github.com/go-chi/chi/v5"
 )
 
 type data struct {
@@ -11,10 +14,15 @@ type data struct {
 }
 
 func main() {
-	http.HandleFunc("/", home)
+	router := chi.NewRouter()
+
+	router.Use(middleware.Logger)
+	router.Use(middleware.Recoverer)
+
+	router.Get("/", home)
 
 	fmt.Println("Started http server on port :8080")
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(":8080", router)
 }
 
 func home(w http.ResponseWriter, r *http.Request) {

@@ -1,4 +1,4 @@
-module github.com/osag1e/go-k8s-google-cluster
+module github.com/OsagieDG/go-k8s-google-cluster
 
 go 1.21.0
 
